@@ -13,7 +13,14 @@ export const state = () => ({
 
   user: {},
   menuList: [],
-  permission: {}
+  permission: {},
+
+  // main中的MainHead组件中的值
+  mainHeadTitle: '', // Main组件中的title值
+  ifShow: true, // 是否显示Main组件
+  ifBack: false, // 是否显示Main组件返回按钮
+
+  collapse: false // 是否收缩侧边栏
 })
 
 //  mutation 必须同步执行
@@ -68,7 +75,7 @@ export const actions = {
     commit('update', {user: user.payload || {}})
 
     let menuResources = await this.$axios.$get(
-      `/deepexi-permission/api/v1/apps/service/userResource`
+      `/deepexi-permission/api/v2/apps/service/userResource`
     )
     if (menuResources && menuResources.payload) {
       commit('update', {

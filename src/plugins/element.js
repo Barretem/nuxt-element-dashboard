@@ -32,7 +32,8 @@ import {
   DropdownMenu,
   DropdownItem,
   Row,
-  Col
+  Col,
+  Scrollbar
 } from 'element-ui'
 import ElFormRenderer from '@femessage/el-form-renderer'
 import ElDataTable from 'el-data-table'
@@ -70,6 +71,7 @@ Vue.use(Dialog)
 Vue.use(Tooltip)
 // Vue.use(Cascader)
 // Vue.use(Autocomplete)
+Vue.use(Scrollbar)
 
 // steps
 // Vue.use(Steps)
